@@ -1,4 +1,4 @@
-        function isNotEmpty(field) {
+function isNotEmpty(field) {
             var inputStr = field.value;
             if (inputStr == "" || inputStr == null) {
                 alert("This field requires an entry.");
@@ -9,7 +9,7 @@
             return true;
         }
 
-        function isPhoneNumber(field) {
+function isPhoneNumber(field) {
             if (isNotEmpty(field)) {
                 var number = field.value;
                 var regEx = /^\+?[0-9]+$/;
@@ -26,7 +26,7 @@
             return false;
         }
 
-        function isNumber(field) {
+function isNumber(field) {
             if (isNotEmpty(field)) {
                 var inputStr = field.value;
                 for (var i = 0; i < inputStr.length; i++) {
@@ -43,7 +43,7 @@
             return false;
         }
 
-        function isValidDay(field) {
+function isValidDay(field) {
             if (isNumber(field)) {  // Check if it's a number first
                 var day = parseInt(field.value);  // Parse the day as an integer
 
@@ -59,7 +59,7 @@
             return false;
         }
 
-        function isValidMonth(field) {
+function isValidMonth(field) {
             if (isNumber(field)) {  // Check if it's a number first
                 var month = parseInt(field.value);  // Parse the month as an integer
 
@@ -75,7 +75,7 @@
             return false;
         }
 
-        function isValidYear(field) {
+function isValidYear(field) {
             if (isNumber(field)) {  // Check if it's a number first
                 var year = parseInt(field.value);  // Parse the year as an integer
 
@@ -91,7 +91,7 @@
             return false;
         }
 
-        function validateForm(form) {
+function validateForm(form) {
             if (isNotEmpty(form.Name) && isPhoneNumber(form.Num) && isValidDay(form.Day) &&
                 isValidMonth(form.Month) && isValidYear(form.Year) && isNotEmpty(form.Pastime)) {
 
